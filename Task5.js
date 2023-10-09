@@ -239,7 +239,7 @@ let products=[
 
  app.post("/products",function(req,res){
     let body= req.body;
-    let  product = { id:products.length+1, ...body};
+    let  product = { id: +products.length+1, ...body};
     products.push(product)
     res.send(product)
  });
